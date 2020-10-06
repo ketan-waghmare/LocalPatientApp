@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">LocalPatientsApp</string>
+    <string name="text_create">Create Pin</string>
+    <string name="text_enter_pin">Enter Pin</string>
+    <string name="text_login">Login</string>
+    <string name="text_create_pin">Create Pin</string>
+    <string name="text_patient_list">Patient List</string>
+    <string name="text_mobile_number">Enter Mobile Number</string>
+    <string name="text_first_name">Enter First Name</string>
+    <string name="text_last_name">Enter Last Name</string>
+    <string name="text_dateofbirth">Date Of Birth</string>
+    <string name="text_add_patient">Add Patient</string>
+    <string name="text_patient_detail">Patient Detail</string>
+
+    <array name="blood_group">
+        <item name="select_text">Select Blood Group</item>
+        <item name="o_positive">O+</item>
+        <item name="o_negative">O-</item>
+        <item name="a_positive">A+</item>
+        <item name="a_negative">A-</item>
+        <item name="b_negative">B-</item>
+        <item name="b_positive">B+</item>
+        <item name="ab_positive">AB+</item>
+        <item name="ab_negative">AB-</item>
+    </array>
+
+
+    <array name="status">
+        <item name="select_text">Select Status</item>
+        <item name="active">Active</item>
+        <item name="inactive">Inactive</item>
+    </array>
+</resources>
