@@ -102,4 +102,32 @@ public class DataBaseHelper {
         }
         return jArray;
     }
+
+    /**
+     * get the filetered list of patients
+     */
+    public JSONArray getFilteredList(String firstName, String createdDate, String dateOfBirth) {
+        Cursor cursor = null;
+        JSONArray jArray = new JSONArray();
+
+        cursor = sqLiteDatabase.rawQuery("SELECT * from `" + DataBaseConstants.TableNames.TBL_PATIENTS + "` Where is_deleted = 'N' AND " + DataBaseConstants.Constants_TBL_PATIENTS.FIRST_NAME + " LIKE '%" + firstName + "%' AND "
+                + DataBaseConstants.Constants_TBL_PATIENTS.DATE_OF_BIRTH + " LIKE '%" + dateOfBirth + "%' AND " + DataBaseConstants.Constants_TBL_PATIENTS.CREATE_DATE + " LIKE '%" + createdDate + "%'", null);
+
+        JSONObject json = null;
+
+        if (cursor.getCount() != 0) {
+            try {
+                while (cursor.moveToNext()) {
+                    json = new JSONObject();
+                    for (int i = 0; i < cursor.getColumnCount(); i++) {
+                        json.put(cursor.getColumnName(i), cursor.getString(cursor.getColumnIndex(cursor.getColumnName(i))));
+                    }
+                    jArray.put(json);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return jArray;
+    }
 }

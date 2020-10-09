@@ -11,6 +11,8 @@
     <string name="text_dateofbirth">Date Of Birth</string>
     <string name="text_add_patient">Add Patient</string>
     <string name="text_patient_detail">Patient Detail</string>
+    <string name="text_filter">Filter</string>
+    <string name="text_created_date">Created Date</string>
 
     <array name="blood_group">
         <item name="select_text">Select Blood Group</item>
